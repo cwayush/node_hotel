@@ -25,7 +25,7 @@ const jwtAuthMiddleware = (req, res, next) => {
 
 const generationToken = (userData) => {
     // Generate a new token using user data with expery time:
-    return jwt.sign(userData, process.env.JWT_SECRET, { expiresIn: 3000 });
+    return jwt.sign(userData, process.env.JWT_SECRET, { expiresIn: 15 });
 
 }
 
